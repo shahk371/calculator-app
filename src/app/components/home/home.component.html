@@ -1,0 +1,16 @@
+<h1>Welcome to Calculator application</h1>
+
+<nav>
+    <a routerLink="/calculator">Calculator</a><br><br>
+    <a routerLink="/patterns">Patterns</a><br><br>
+</nav>
+
+<button type="button" (click)="getIPAddress()">Display IP Address</button><br><br>
+
+<div>
+    <label for="numberField">Add Nos to Append: </label>
+    <p><input type="text" id="numberField" [(ngModel)]="numberField"></p>
+</div>
+<button type="button" (click)="getListOfNos()">Append</button><br>
+<p>Nos in ascending order: {{values}}</p>
+

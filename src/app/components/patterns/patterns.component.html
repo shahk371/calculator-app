@@ -1,0 +1,17 @@
+<p>Patterns</p>
+<span>
+    <pre [innerHtml]="fisrtStarPattern"></pre>
+</span>
+<span>
+    <pre [innerHtml]="secondStarPattern"></pre>
+</span>
+<span>
+    <label>Enter string To display Pattern 1</label>
+    <input type="text" [(ngModel)]="firstStringValue" (blur)="printFirstAlphabetPattern()">
+    <pre [innerHtml]="fisrtStringPattern"></pre>
+</span>
+<span>
+    <label>Enter string To display Pattern 2</label>
+    <input type="text" [(ngModel)]="secondStringValue" (blur)="printSecondAlphabetPattern()">
+    <pre [innerHtml]="secondStringPattern"></pre>
+</span>

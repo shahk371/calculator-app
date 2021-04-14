@@ -1,0 +1,21 @@
+<form #calculatorForm="ngForm">
+    <div>
+        <div>
+            <label for="fNumber">First Number</label>
+            <p><input id="fNumber" type="text" name="firstNumber" [(ngModel)]="firstNumber" pattern="^[0-9]+$"></p>
+            <p *ngIf="calculatorForm.controls.firstNumber?.invalid && calculatorForm.controls.firstNumber?.touched && calculatorForm.controls.firstNumber.errors?.pattern" class="error">Please enter valid 1st number!</p> 
+        </div>
+        <div>
+            <label for="sNumber">Second Number</label>
+            <p><input id="sNumber" type="text" name="secondNumber" [(ngModel)]="secondNumber" pattern="^[0-9]+$"></p>
+            <p *ngIf="calculatorForm.controls.secondNumber?.invalid && calculatorForm.controls.secondNumber?.touched && calculatorForm.controls.secondNumber.errors?.pattern" class="error">Please enter valid 2nd number!</p> 
+        </div>
+       <div>
+            <p><label>Output</label>: {{output}}</p>
+       </div>
+       <button class="add-margin" (click)="performCalculation('+')">Add</button>
+       <button class="add-margin" (click)="performCalculation('-')">Subtract</button>
+       <button class="add-margin" (click)="performCalculation('*')">Multiply</button>
+       <button class="add-margin" (click)="performCalculation('/')">Divide</button>
+    </div>
+</form>
